@@ -14,7 +14,7 @@ class TestLogo:
         page.open_mind_page()
         page.find_and_click_logo_yandex()
         page.switch_to_new_tab_and_wait_url(URLS.DZEN_URL)
-        assert URLS.DZEN_URL in driver.current_url
+        assert page.current_url_contains(URLS.DZEN_URL)
 
 
     @allure.title('Проверка перехода на главную страницу при клике на логотип "Самокат"')
@@ -23,6 +23,6 @@ class TestLogo:
         page.open_order_page()
         page.find_and_click_logo_scooter()
         page.check_url_to_be(URLS.MAIN_URL)
-        assert URLS.MAIN_URL in driver.current_url
+        assert page.current_url_contains(URLS.MAIN_URL)
 
 

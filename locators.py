@@ -42,7 +42,3 @@ class OrderPageLocators:
     SUCCESS_MODAL_TEXT = (By.XPATH, '//div[text()="Заказ оформлен"]')
     TITLE_CONFIRMATION = (By.XPATH, '//div[text()="Хотите оформить заказ?"]')
     METRO_FIRST_OPTION = (By.XPATH, ".//li[@class='select-search__row']")
-
-
-
-    

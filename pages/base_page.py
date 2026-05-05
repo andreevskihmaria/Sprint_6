@@ -32,14 +32,14 @@ class BasePage:
         return element
 
 
-    @allure.step('Проверяем текст в поле')
-    def get_text(self, locator):
-        return self.find_element(locator).text
-
-
     @allure.step('Проверяем открытие нужной страницы')
     def check_url_to_be(self, url, time=5):
         WebDriverWait(self.driver, time).until(EC.url_to_be(url))
+
+    
+    @allure.step('Проверяем, что текущий url содержит ожидаемый текст')
+    def current_url_contains(self, url_part):
+        return url_part in self.driver.current_url
 
 
     @allure.step('Ожидание элемента')
